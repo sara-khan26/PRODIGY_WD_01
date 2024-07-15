@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body{
+    background-image: url("img/back.jpg");
+    background-size: cover ; 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+span{
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #ffffff;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #ffff;
+}
+h4{
+    font-size: 20px;
+    color: #ffff;
+}
+h5{
+    color: #ffff;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+    color: #ffff;
+}
+p{
+    font-size: 16px;
+    color: #ffff;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    margin: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    padding: 20px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid white;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav a{
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 35px;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active{
+    color: #1c9cff;
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    border-left: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home_img img{
+    height: 480px;
+    width: 500px;
+}
+
+#home_content{
+    padding: 0 200px;
+}
+#home_content h4 {
+    padding-bottom: 15px;
+}
+#home_content h1{
+    color:#1c9cff;
+}
+.btn {
+    --color: #1c9cff;
+    --color2: #ffff;
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 2px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+.btn::after, .btn::before {
+content: '';
+display: block;
+height: 100%;
+width: 100%;
+transform: skew(90deg) translate(-50%, -50%);
+position: absolute;
+inset: 50%;
+left: 25%;
+z-index: -1;
+transition: .5s ease-out;
+background-color: var(--color);
+}
+   
+.btn::before {
+top: -50%;
+left: -25%;
+transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+   
+.btn:hover::before {
+transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+color: var(--color2);
+}
+
+.btn:active {
+filter: brightness(.7);
+transform: scale(.98);
+}
+
+#products{
+    min-height: 100vh;
+    width: 100%;
+    border-left: 2px solid white;
+}
+#products .pro-content{
+    padding-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#products .pro{
+    width: 23%;
+    min-width: 250px;
+    max-height: 500px;
+    padding: 10px 12px;
+    border-radius: 15px;
+    background: #181818;
+    box-shadow:  5px 5px 6px #303030,
+             -5px -5px 6px #303030;
+    cursor: pointer;
+    margin: 30px 15px;
+    position: relative;
+
+}
+
+#products .pro img{
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#products .pro .des{
+    text-align: start;
+    padding: 10px 15px;
+
+}
+
+#products .pro .des span{
+    color: #aeaeae;
+    font-size: 12px;
+}
+
+#products .pro .des h5{
+    padding-top: 7px;
+    color: #dfdfdf;
+    font-size: 14px;
+}
+#products .pro .des h4{
+    padding-top: 7px;
+    color: #1c9cff;
+    font-size: 15px;
+    font-weight: 700;
+}
+#products .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #1c9cff;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#products .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 150px; 
+    flex-wrap: wrap;
+}
+
+#about{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid white;
+}
+
+#about .about-container{
+    background: url("img/about.jpg") no-repeat left;
+    background-size: 55%;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+#about .inner-container{
+    width: 55%;
+    float: right;
+    background-color: #303030;
+    padding: 150px;
+    border-bottom-left-radius: 25px;
+}
+
+#about .inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#about .text{
+    font-size: 15px;
+    color: #ffff;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+#about .more-info{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+}
+
+#about .more-info a{
+    text-decoration: none;
+    color: #6799bf;
+    cursor: pointer;
+}
+
+#about .more-info .i{
+    color: #1c9cff;
+}
+
+#contact{
+    min-height: 100vh;
+    border-left: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section{
+    background-color: #303030;
+    padding: 40px 0;
+    min-width: 60%;
+    border-radius: 25px;
+    margin-top: 100px;
+}
+
+.contact-section h1{
+    text-align: center;
+    color: #ddd;
+}
+
+.border{
+    width: 100px;
+    height: 10px;
+    background-color: #34495e;
+    margin: 40px auto;
+}
+
+.contact-form{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+}
+
+.contact-form-text:focus{
+    box-shadow: 0 0 10px 4px #6799bf;
+}
+
+textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn{
+    float: right;
+    border: 0;
+    background: #6799bf;
+    color: #ffff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-form-btn:hover{
+    background: #1c9cff;
+}
+/* section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    border: 2px solid;
+    font-size: 100px;
+    font-weight: 700;
+} */
